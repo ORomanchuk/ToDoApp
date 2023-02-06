@@ -1,7 +1,7 @@
 @font-face {
     font-family: "SFPRO";
-    src: url("/doDoApp/fonts/SFProDisplay-Medium.woff2") format("woff2"),
-        url("/doDoApp/fonts/SFProDisplay-Medium.woff") format("woff");
+    src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2"),
+        url("../fonts/SFProDisplay-Medium.woff") format("woff");
 }
 
 * {
@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: url(/doDoApp/img/wallpaper.jpg);
+    background-image: url(../img/wallpaper.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -35,7 +35,8 @@ button {
     margin: 40px auto;
     width: 360px;
     height: 780px;
-    background-image: url(/doDoApp/img/iphone-xr-wallpaper-2.webp);
+    background-image: url(../img/iphone-xr-wallpaper-2.webp);
+    /* background-image: url(/); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,7 +48,7 @@ button {
     height: 750px;
     position: relative;
     z-index: 500;
-    background-image: url(/doDoApp/img/iphone-xr-wallpaper-2.webp);
+    background-image: url(../img/iphone-xr-wallpaper-2.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -150,7 +151,7 @@ border-radius: 40px 40px 0 0;
 }
 
 .safari {
-    background-image: url(/doDoApp/img/safari.png);
+    background-image: url(../img/safari.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 90%;
@@ -158,28 +159,28 @@ border-radius: 40px 40px 0 0;
 }
 
 .appstore {
-    background-image: url(/doDoApp/img/app-store.png);
+    background-image: url(../img/app-store.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .messages {
-    background-image: url(/doDoApp/img/messages.png);
+    background-image: url(../img/messages.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 110%;
 }
 
 .map {
-    background-image: url(/doDoApp/img/apple.png);
+    background-image: url(../img/apple.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .settings {
-    background-image: url(/doDoApp/img/settings.png);
+    background-image: url(../img/settings.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -187,14 +188,14 @@ border-radius: 40px 40px 0 0;
 
 .slack {
     background-color: #fff;
-    background-image: url(/doDoApp/img/slack.png);
+    background-image: url(../img/slack.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 75%;
 }
 
 .github {
-    background-image: url(/doDoApp/img/github.png);
+    background-image: url(../img/github.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 110%;
@@ -202,7 +203,7 @@ border-radius: 40px 40px 0 0;
 
 .toDoList {
     background-color: #fff;
-    background-image: url(/doDoApp/img/list.png);
+    background-image: url(../img/list.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -396,7 +397,7 @@ h1 {
 .cardEdit {
     width: 25px;
     height: 25px;
-    background-image: url(/doDoApp/img/edit.png);
+    background-image: url(../img/edit.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -406,7 +407,7 @@ h1 {
 .cardBin {
     width: 25px;
     height: 25px;
-    background-image: url(/doDoApp/img/bin.png);
+    background-image: url(../img/bin.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

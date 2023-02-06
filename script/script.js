@@ -56,9 +56,9 @@
         screen.style.zIndex = "5";
         time.style.color = "#000";
         topPanel.style.backgroundColor = "#abcea1"
-        signalImg.src="/doDoApp/img/signal-black.png";
-        wifilImg.src="/doDoApp/img/wifi-black.png";
-        batImg.src="/doDoApp/img/battery-black.png";
+        signalImg.src="./img/signal-black.png";
+        wifilImg.src="./img/wifi-black.png";
+        batImg.src="./img/battery-black.png";
     }
 
     function сloseApp () {
@@ -66,9 +66,9 @@
         toDoScreen.style.zIndex = "150";
         screen.style.zIndex = "200";
         topPanel.style.backgroundColor = "transparent"
-        signalImg.src="/doDoApp/img/signal.png";
-        wifilImg.src="/doDoApp/img/wifi.png";
-        batImg.src="/doDoApp/img/battery.png";
+        signalImg.src="./img/signal.png";
+        wifilImg.src="./img/wifi.png";
+        batImg.src="./img/battery.png";
         time.style.color = "#fff";
     }
 
@@ -149,10 +149,6 @@
                 function chahgeText () {
                     newText = editInput.value;
                     editInput.remove();
-                    // let newP = document.createElement("p");
-			        // newP.innerText = newText;
-                    // input.after(newP);
-                    // p = document.createElement("p");
 			        p.innerText = newText;
                     textmemory = newText;
                     input.after(p);
