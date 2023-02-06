@@ -17,19 +17,7 @@
 	let taskList = document.querySelector(".listOfTasks");
     let footer = document.querySelector(".footer");
     
-
 	let tasks = [];
-
-    function getCurrentTimeString(dots) {
-        var timeString = new Date().toTimeString().replace(/:[0-9]{2,2} .*/, '');
-        return dots ? timeString : timeString.replace();
-    }
-   
-    setInterval(
-        function() { 
-            time.innerHTML = getCurrentTimeString(Math.round(Date.now() / 1000) % 2);
-        }
-    );
 
 	addTaskButton.addEventListener("click", addTaskHandler);
 	pendingBtn.addEventListener("click", showPendingHandler);
@@ -38,10 +26,13 @@
     ClearBtn.addEventListener("click", delateAllHandler);
     appToDo.addEventListener("click", openApp);
     footer.addEventListener("click", сloseApp);
-
 	taskNameInput.addEventListener("keydown", function (e) {
 		if (e.code == "Enter") addTaskHandler();
 	})
+
+    // OPEN AND CLOSE THE APPLICATION
+    // OPEN AND CLOSE THE APPLICATION
+    // OPEN AND CLOSE THE APPLICATION
 
     function openApp () {
         setTimeout(function() {
@@ -49,8 +40,8 @@
             toDoScreen.style.zIndex = "200";
             screen.style.zIndex = "50";
             topPanel.style.backgroundColor = "#fff"
-
-        }, 4000);
+            
+        }, 2000);
         toDoScreen.style.zIndex = "20";
         uploadScreen.style.zIndex = "200";
         screen.style.zIndex = "5";
@@ -72,43 +63,47 @@
         time.style.color = "#fff";
     }
 
+    // CREATING THE TASK
+    // CREATING THE TASK
+    // CREATING THE TASK
+    
 	function addTaskHandler() {
-		if (taskNameInput.value) {
-			if (!startMessage.hidden) startMessage.hidden = true;
-
+        if (taskNameInput.value) {
+            if (!startMessage.hidden) startMessage.hidden = true;
+            
 			let newTask = new Task(taskNameInput.value);
-
+            
 			newTask.createIn(taskList);
 			tasks.push(newTask);
 			taskNameInput.value = "";
 		} else {
-			alert("введите имя задачи");
+            alert("введите имя задачи");
 		}
 	}
-
+    
 	class Task {
-		constructor(text) {
-			this.text = text;
+        constructor(text) {
+            this.text = text;
 			this.isDone = false;
             this.isDelated = false;
 			this.div = null;
 		}
-
+        
 		createIn(element) {
 			this.div = document.createElement("div");
 			this.div.classList.add("task");
-
+            
 			let input = document.createElement("input");
 			input.addEventListener("click", () => this.changeState(this.div));
 			input.type = "checkbox";
-
+            
 			let p = document.createElement("p");
 			p.innerText = this.text;
             let textmemory = this.text;
             let newText;
             console.log(textmemory);
-
-
+            
+            
             let date = document.createElement("div");
             date.classList.add("date");
             let moment = new Date();
@@ -116,11 +111,11 @@
 			
 			let cardSet = document.createElement("div");
             cardSet.classList.add("cardSet");
-
+            
             let cardEdit = document.createElement("div");
             cardEdit.classList.add("cardEdit");
             cardSet.append(cardEdit);
-
+            
             
             let cardBin = document.createElement("div");
             cardBin.classList.add("cardBin");
@@ -133,8 +128,8 @@
             this.div.append(date);
 			this.div.append(cardSet);
 			taskList.append(this.div);
-
-
+            
+            
             cardEdit.addEventListener("click", function() {
                 p.remove();
                 let editInput = document.createElement("input");
@@ -155,39 +150,58 @@
                 }
             });
 		}
-
+        
 		changeState(element) {
-			this.isDone = !this.isDone;
+            this.isDone = !this.isDone;
 			element.classList.toggle("completed");
             console.log(this.isDone);
 		}
-
+        
         delateState(element) {
-			this.isDelated = !this.isDelated;
+            this.isDelated = !this.isDelated;
 			element.classList.toggle("delated");
             console.log(this.isDelated);
             element.remove();
 		}
 	}
 
+    // SET SYSTEM TIME
+    // SET SYSTEM TIME
+    // SET SYSTEM TIME
+    
+    function getCurrentTimeString(dots) {
+        var timeString = new Date().toTimeString().replace(/:[0-9]{2,2} .*/, '');
+        return dots ? timeString : timeString.replace();
+    }
+   
+    setInterval(
+        function() { 
+            time.innerHTML = getCurrentTimeString(Math.round(Date.now() / 1000) % 2);
+        }
+    );
+
+    // NAVIGATION HANDLERS
+    // NAVIGATION HANDLERS
+    // NAVIGATION HANDLERS
+
 	function showPendingHandler () {
-		while (taskList.firstChild) {
-			taskList.removeChild(taskList.firstChild);
+        while (taskList.firstChild) {
+            taskList.removeChild(taskList.firstChild);
 		}
 		tasks.forEach(task => {
-			if (task.isDone == false && task.isDelated == false) {
-				taskList.append(task.div);
+            if (task.isDone == false && task.isDelated == false) {
+                taskList.append(task.div);
 			}
 		});
 	}
 	
 	function showAllHandler () {
-		while (taskList.firstChild) {
-			taskList.removeChild(taskList.firstChild);
+        while (taskList.firstChild) {
+            taskList.removeChild(taskList.firstChild);
 		}
 		tasks.forEach(task => {
             if (task.isDelated == false && task.isDelated == false) {
-				taskList.appendChild(task.div);
+                taskList.appendChild(task.div);
 			}
 		});
 	}
