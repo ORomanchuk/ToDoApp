@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/doDoApp/style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="iphoneXr">
+        <div class="topPanel flexable">
+            <div class="time"></div>
+            <div class="topIsland flexable">
+                <div class="speaker"></div>
+                <div class="camera"></div>
+            </div>
+            <div class="battery flexable">
+                <img class="signalImg" src="/doDoApp/img/signal.png" alt="sig">
+                <img class="wifilImg" src="/doDoApp/img/wifi.png" alt="sig">
+                <img class="batImg" src="/doDoApp/img/battery.png" alt="bat">
+            </div>
+        </div>
+        
+        <div class="screen">
+            <div class="workingSpace flexable">
+                <button class="appSettings">
+                    <a href="https://support.apple.com/" target="_blank">
+                        <div class="appImg settings"></div>
+                        <p class="appName">Settings</p>
+                    </a>
+                </button>
+                <button class="appSlack">
+                    <a href="https://slack.com/" target="_blank">
+                        <div class="appImg slack"></div>
+                        <p class="appName">Slack</p>
+                    </a>
+                </button>
+                <button class="appGithub">
+                    <a href="https://github.com/" target="_blank">
+                        <div class="appImg github"></div>
+                        <p class="appName">GitHub</p>
+                    </a>
+                </button>
+                <button class="appToDo">
+                        <div class="appImg toDoList"></div>
+                        <p class="appName">To Do List</p>
+                </button>
+            </div>
+            <div class="mainBtns flexable">
+                <a href="https://www.apple.com/ua/safari/" target="_blank">
+                    <button class="application safari"></button>
+                </a>
+                <a href="https://www.apple.com/ua/app-store/" target="_blank">
+                    <button class="application appstore"></button>
+                </a>
+                <a href="https://support.apple.com/messages" target="_blank">
+                    <button class="application messages"></button>
+                </a>
+                <a href="https://www.apple.com/ua/maps/" target="_blank">
+                    <button class="application map"> </button>
+                </a>
+            </div>
+        </div>
+    
+        <div class="toDoScreen flexable">
+            <h1>TODO App</h1>
+            <div class="toDoArr flexable">
+                <div class="toDoInput flexable">
+                    <input type="text" placeholder="Add New Task..." class="taskNameInput">
+                    <button class="createBtn">+</button>
+                </div>
+                <!-- <div class="keyboard flexable">
+
+                </div> -->
+                <span class="list listOfTasks">
+                    <p class ="startMessage">There are no tasks for today</p>
+                </span>
+            </div>
+            <nav class="navigation flexable">
+                <button class="navBtn allTasksBtn">All Tasks</button>
+                <button class="navBtn pendingBtn">Pending</button>
+                <button class="navBtn completedBtn">Completed</button>
+                <button class="navBtn ClearBtn">Clear All</button>
+            </nav>
+            <div class="footer">
+                <div class="bottom"></div>
+            </div>
+
+        </div>
+
+        <div class="uploadScreen flexable">
+            <h2>To Do App</h2>
+            <h3>by Oleksandr Romanchuk</h3>
+        </div>
+    </div>
+    <script src="./script/script.js"></script>
+</body>
+</html>
