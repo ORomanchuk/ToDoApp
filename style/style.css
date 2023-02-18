@@ -64,14 +64,12 @@ button {
     text-align: center;
     margin-top: auto;
     margin-left: 5px;
-    
 }
 
 .iphoneXr .topPanel .battery {
     color: #fff;
     width: 25%;
     margin-top: auto;
-    
 }
 
 .iphoneXr .topPanel .topIsland {
@@ -102,7 +100,8 @@ button {
     box-shadow: inset 0px -3px 2px 0px rgba(256, 256, 256, 0.2);
 }
 
-.iphoneXr .topPanel .signalImg, .wifilImg {
+.iphoneXr .topPanel .signalImg,
+.wifilImg {
     margin-top: 5px;
     margin-right: 4px;
     height: 20px;
@@ -127,6 +126,7 @@ button {
     background-repeat: no-repeat;
     border-radius: 0 0 35px 35px;
 }
+
 .screen .workingSpace {
     justify-content: space-between;
     align-items: flex-start;
@@ -246,7 +246,7 @@ button {
     width: 360px;
     background-color: #fff;
     padding-top: 10px;
-    padding-bottom:5px;
+    padding-bottom: 5px;
     padding-left: 20px;
 }
 
@@ -264,7 +264,7 @@ button {
     background-color: #E2EEDE;
 }
 
-.toDoScreen .toDoArr .toDoInput .taskNameInput{
+.toDoScreen .toDoArr .toDoInput .taskNameInput {
     width: 86%;
     padding-left: 10px;
     margin-left: 10px;
